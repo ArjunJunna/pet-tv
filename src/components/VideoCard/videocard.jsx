@@ -1,4 +1,5 @@
 import './videocard.css'
+import { getTrimmedViewCount } from '../../utilities/js/getTrimmedViewCount';
 
 const VideoCard = ({video,cardDirection}) => {
   return (
@@ -21,7 +22,7 @@ const VideoCard = ({video,cardDirection}) => {
           <div className="card-details">
             <h2 className="detail-heading">{video.title}</h2>
             <p className="detail-subheading">{video.channelName}</p>
-            <p className="detail-subheading">{video.views} views · {video.releaseDate}</p>
+            <p className="detail-subheading">{getTrimmedViewCount(video.views)} views · {video.releaseDate}</p>
           </div>
           <div className="card-footer">
             <div className="card-icons">
