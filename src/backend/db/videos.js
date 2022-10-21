@@ -5,10 +5,10 @@ export const videos = [
     _id: uuid(),
     title: 'Jerry ​​became very excited to meet baby and puppy',
     thumbnailUrl:
-      'https://i.ytimg.com/vi/OKBMCL-frPU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwOVBaXuXOgvwubxOSsBwE3HqlCQ',
+      'https://i.ytimg.com/vi/ZJhA8o5Z4vI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLAEQI_Ue-LRigxVG2xsEOxMSlydWQ',
     channelImg:
-      'https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj',
-    views: '95M',
+      'https://yt3.ggpht.com/ytc/AMLnZu8l3SsXc1UGU-tmz3FA-FTGoT5LJqaAbMTNiFw=s48-c-k-c0x00ffffff-no-rj',
+    views: '9,52,23,198',
     videoLength: '05:12',
     channelName: 'THE ROTT',
     categoryName: 'Dogs',
@@ -23,7 +23,7 @@ export const videos = [
       'https://i.ytimg.com/vi/i6SgeAiq3zs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLCn8kkhlAUa1DtS2lUPrPl7eYmmwA',
     channelImg:
       'https://yt3.ggpht.com/ytc/AMLnZu_4GvRCiIo4XzXimQmdqwtprTycbbng_-BBd2ij=s48-c-k-c0x00ffffff-no-rj',
-    views: '29K',
+    views: '29,517',
     videoLength: '05:17',
     channelName: 'Haribo The Shiba',
     categoryName: 'Dogs',
@@ -35,7 +35,7 @@ export const videos = [
     _id: uuid(),
     title: `Reasons Not To Get A GIANT Dog! So Mischievous!!`,
     thumbnailUrl:
-      'https://i.ytimg.com/vi/ZJhA8o5Z4vI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLAEQI_Ue-LRigxVG2xsEOxMSlydWQ',
+      'https://i.ytimg.com/vi/jSoA1F3Elwo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLC6A7KlNzFGaopvIl2w6s9vUUVaQQ',
     channelImg:
       'https://yt3.ggpht.com/yIOyMXCFJ56IvWt_FS8EyowdQcISnzSqVGWusNaaeWHOULr3KSrNDHKiSMd3Nm_Avi_pK9Us=s48-c-k-c0x00ffffff-no-rj',
     views: '99,826',
@@ -197,51 +197,9 @@ export const videos = [
     releaseDate: '11 Jul 2018',
     description: `Canary singing: This is the best video to training canaries, in this video you can hear the most beautiful canary song and you can also see the best canary singing live for training.`,
   },
-  {
-    _id: uuid(),
-    title: `BIRDS Names and Sounds - Learn Bird Species in English`,
-    thumbnailUrl:
-      'https://i.ytimg.com/vi/WhRpW0cVmds/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLBkGXDAm3gJ9Ut9A0KIZThLwCml7g',
-    channelImg:
-      'https://yt3.ggpht.com/ytc/AMLnZu_3BBKEyXnTgTDRlbdl8OLday3yv1k8vEOIgOAXcA=s48-c-k-c0x00ffffff-no-rj',
-    views: '1,78,55,277',
-    videoLength: '19:45',
-    channelName: 'Kiddopedia',
-    categoryName: 'Birds',
-    youtubeId: 'WhRpW0cVmds',
-    releaseDate: '05 Oct 2019',
-    description: `Bird names and sounds. Can you identify the birds from their sounds? This video helps you learn bird species with their sounds.`,
-  },
-  {
-    _id: uuid(),
-    title: `BIRDS Names and Sounds - Learn Bird Species in English`,
-    thumbnailUrl:
-      'https://i.ytimg.com/vi/WhRpW0cVmds/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLBkGXDAm3gJ9Ut9A0KIZThLwCml7g',
-    channelImg:
-      'https://yt3.ggpht.com/ytc/AMLnZu_3BBKEyXnTgTDRlbdl8OLday3yv1k8vEOIgOAXcA=s48-c-k-c0x00ffffff-no-rj',
-    views: '1,78,55,277',
-    videoLength: '19:45',
-    channelName: 'Kiddopedia',
-    categoryName: 'Birds',
-    youtubeId: 'WhRpW0cVmds',
-    releaseDate: '05 Oct 2019',
-    description: `Bird names and sounds. Can you identify the birds from their sounds? This video helps you learn bird species with their sounds.`,
-  },
-  {
-    _id: uuid(),
-    title: `BIRDS Names and Sounds - Learn Bird Species in English`,
-    thumbnailUrl:
-      'https://i.ytimg.com/vi/WhRpW0cVmds/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLBkGXDAm3gJ9Ut9A0KIZThLwCml7g',
-    channelImg:
-      'https://yt3.ggpht.com/ytc/AMLnZu_3BBKEyXnTgTDRlbdl8OLday3yv1k8vEOIgOAXcA=s48-c-k-c0x00ffffff-no-rj',
-    views: '1,78,55,277',
-    videoLength: '19:45',
-    channelName: 'Kiddopedia',
-    categoryName: 'Birds',
-    youtubeId: 'WhRpW0cVmds',
-    releaseDate: '05 Oct 2019',
-    description: `Bird names and sounds. Can you identify the birds from their sounds? This video helps you learn bird species with their sounds.`,
-  },
+  
+  
+  
   {
     _id: uuid(),
     title: `Beautiful Stallions Around the World - A Relaxing Video for Horse Lovers!`,
