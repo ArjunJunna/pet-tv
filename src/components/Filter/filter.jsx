@@ -1,13 +1,15 @@
-import './filter.css'
-import {useDataContext} from '../../context/dataContext';
+import './filter.css';
+import { useDataContext } from '../../context/dataContext';
 
 const Filter = () => {
-
-    const {data:{categoryData,selectedCategory},dataDispatch}=useDataContext();
+  const {
+    data: { categoryData, selectedCategory },
+    dataDispatch,
+  } = useDataContext();
 
   return (
-     <div class="main__container-filters">
-       {categoryData.map((category)=>{
+    <div class="main__container-filters">
+      {categoryData.map(category => {
         return (
           <button
             className={`button btn-chip btn-outline  ${
@@ -24,10 +26,9 @@ const Filter = () => {
             {category.categoryName}
           </button>
         );
-}    
-       )}
-     </div>
-  )
-}
+      })}
+    </div>
+  );
+};
 
-export default Filter
+export default Filter;
