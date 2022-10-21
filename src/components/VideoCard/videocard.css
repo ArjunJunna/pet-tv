@@ -15,11 +15,13 @@
 
 .card-header {
   position: relative;
+  padding: 0;
 }
 
 .card__container.vertical .card-image {
   height: 18rem;
   width: 100%;
+  display: block;
 }
 
 .card-header .card-badge {
@@ -41,6 +43,13 @@
 
 .card-details .detail-heading {
   font-size: 1.5rem;
+  text-overflow: ellipsis;
+  min-height: 1rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+  -webkit-line-clamp: 2;
 }
 
 .card-details .detail-subheading {
