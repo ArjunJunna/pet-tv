@@ -72,3 +72,8 @@
   background-color: var(--active-link-color);
   color: var(--header-bg-color);
 }
+
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+  font-size: 2rem;
+}

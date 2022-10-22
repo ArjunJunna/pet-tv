@@ -17,6 +17,9 @@ const dataReducer=(state,action)=>{
       case 'SORT_BY_CATEGORY':
         return { ...state, selectedCategory: action.payload };
 
+      case 'SEARCH':
+        return { ...state, searchFor: action.payload };
+
       default:
         return state;
     }

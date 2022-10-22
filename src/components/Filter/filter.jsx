@@ -8,14 +8,15 @@ const Filter = () => {
   } = useDataContext();
 
   return (
-    <div class="main__container-filters">
+    <div className="main__container-filters">
       {categoryData.map(category => {
         return (
           <button
             className={`button btn-chip btn-outline  ${
               selectedCategory === category.categoryName ? `active` : ``
             }`}
-            id={category._id}
+            
+            key={category._id}
             onClick={e =>
               dataDispatch({
                 type: 'SORT_BY_CATEGORY',
