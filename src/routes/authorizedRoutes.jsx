@@ -7,7 +7,7 @@ const AuthorizedRoutes=()=>{
     const {auth}=useAuth();
     const location= useLocation();
 
-  return auth.isAuthorized ? (<Outlet />) : ( <Navigate to="/login-page" state={{ from: location }} replace />
+  return auth.isAuthorized ? (<Outlet />) : ( <Navigate to="/login" state={{ from: location }} replace />
   );
 }
 

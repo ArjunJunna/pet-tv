@@ -83,7 +83,7 @@ const SignupPage = () => {
           userName: user,
         });
         toast.success('Successfully Signed up!');
-        navigate('/home');
+        navigate('/explore');
       }
     } catch (err) {
       console.log(err)

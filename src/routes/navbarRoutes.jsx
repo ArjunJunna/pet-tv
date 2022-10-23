@@ -19,15 +19,14 @@ function NavBarRoutes(){
       <Route path="/explore" element={<Explore />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
-
-      <Route path="/history" element={<History />} />
-      <Route path="/likes" element={<Likes />} />
-      <Route path="/playlist" element={<Playlist />} />
-      <Route path="/watchlater" element={<WatchLater />} />
-      <Route path="/videoplayer" element={<VideoPlayer />} />
-
+      <Route element={<AuthorizedRoutes/>}>
+        <Route path="/history" element={<History />} />
+        <Route path="/likes" element={<Likes />} />
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/videoplayer" element={<VideoPlayer />} />
+      </Route>
       <Route path="/mockman" element={<MockAPI />} />
-      
     </Routes>
   );
 }
