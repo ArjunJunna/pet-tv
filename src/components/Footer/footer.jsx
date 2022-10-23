@@ -9,14 +9,14 @@ const Footer = () => {
       <div className="footer--container">
         <div className="social-media">
           <div className="logo">
-            <Link href="#" className="footer-logo">
+            <Link to='/explore' className="footer-logo">
               <img src="/assets/pettvlogo1.png" alt="logo" />
             </Link>
           </div>
           <div className="footer-info">
             <h3>One video library to watch all pet videos...</h3>
             <h3>
-              Made using{' '}
+              Made using
               <Link href="https://its-aqua-ui.netlify.app/">
                 <span className="title-logo">Aqua UI</span>
               </Link>

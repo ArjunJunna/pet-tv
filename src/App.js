@@ -14,7 +14,7 @@ function App() {
       <div className="container">
         <NavBar />
         <Sidebar />
-        {/*<Footer />*/}
+        <Footer />
 
         <main>
           <div className="main__container">
