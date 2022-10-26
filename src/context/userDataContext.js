@@ -14,6 +14,6 @@ const UserDataContextProvider = ({ children }) => {
   );
 };
 
-const useDataContext = () => useContext(userDataContext);
+const useUserData = () => useContext(userDataContext);
 
-export { useDataContext, UserDataContextProvider };
+export { useUserData, UserDataContextProvider };
