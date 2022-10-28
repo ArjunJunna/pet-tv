@@ -17,15 +17,14 @@ const getHistoryData = async (token, userDataDispatch) => {
   }
 };
 
-const addToHistoryData = async (video, token, userDataDispatch) => {
+const addToHistoryData = async(video, token, userDataDispatch)=>{
   try {
     const response = await axios.post(
       '/api/user/history',
       { video },
-      {
-        headers: { authorization: token },
-      }
+      { headers: { authorization: token } }
     );
+    console.log(response);
     if (response.status === 201) {
       userDataDispatch({
         type: 'HISTORY_DATA',

@@ -1,6 +1,6 @@
 import './videocard.css';
 import { getTrimmedViewCount } from '../../utilities/js/getTrimmedViewCount';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 
@@ -11,16 +11,18 @@ const VideoCard = ({ video, cardDirection }) => {
     auth: { isAuthorized },
   } = useAuth();
   const [showActionCard, setShowActionCard] = useState(false);
-
+  console.log(video.youtubeId)
   return (
     <div className="card__container vertical">
-      <div className="card-header">
-        <img
-          src={video.thumbnailUrl}
-          alt="productimage"
-          className="card-image"
-        />
-        <span className="card-badge">{video.videoLength}</span>
+      <div onClick={() => navigate(`/videoplayer/${video.youtubeId}`)}>
+        <div className="card-header">
+          <img
+            src={video.thumbnailUrl}
+            alt="productimage"
+            className="card-image"
+          />
+          <span className="card-badge">{video.videoLength}</span>
+        </div>
       </div>
       <div className="card-content">
         <img
