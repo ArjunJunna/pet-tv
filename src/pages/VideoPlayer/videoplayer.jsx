@@ -22,7 +22,7 @@ const VideoPlayer = () => {
     <>
       <div className="single-video-container video">
         <div className="video__player">
-          {/*<ReactPlayer
+          <ReactPlayer
             url={`https://www.youtube.com/embed/${youtubeId}`}
             controls={true}
             width="100%"
@@ -30,7 +30,7 @@ const VideoPlayer = () => {
             playing={true}
             ref={videoRef}
             onStart={addToHistoryData(video, token, userDataDispatch)}
-  />*/}
+  />
         </div>
         <div className="video__header">
           <div className="video__title">{video.title}</div>
