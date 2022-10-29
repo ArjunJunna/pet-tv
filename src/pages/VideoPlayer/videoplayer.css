@@ -1,0 +1,58 @@
+.single-video-container {
+  padding: 0 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.video__action button {
+  all: unset;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 0.7rem;
+}
+
+.video__header{
+ font-weight: 600;
+}
+
+.video__header .video__title {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+.video__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.video__numbers {
+  font-size: 1.3rem;
+}
+
+.video__action .bi {
+  font-size: 1.8rem;
+  color: var(--grey-color);
+}
+
+.video__action .bi:hover {
+  color: var(--black-color);
+}
+
+.video__header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.video__body {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.video__body .video__body-heading {
+  font-weight: 800;
+}
+
+.video__body .video__body-disc {
+  font-size: 1.4rem;
+}
