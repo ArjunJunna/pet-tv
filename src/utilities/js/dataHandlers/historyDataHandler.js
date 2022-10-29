@@ -38,7 +38,7 @@ const addToHistoryData = async(video, token, userDataDispatch)=>{
 
 const deleteFromHistoryData = async (video, token, userDataDispatch) => {
   try {
-    const response = await axios.delete(`/api/user/history/:${video._id}`, {
+    const response = await axios.delete(`/api/user/history/${video._id}`, {
       headers: { authorization: token },
     });
     if (response.status === 200) {
@@ -47,6 +47,7 @@ const deleteFromHistoryData = async (video, token, userDataDispatch) => {
         payload: response?.data?.history,
       });
       toast.success('Video deleted from history...');
+      console.log('delete success')
     }
   } catch (error) {
     console.log(error);

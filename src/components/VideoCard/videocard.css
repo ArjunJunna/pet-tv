@@ -137,3 +137,20 @@
 .action--option i {
   margin-right: 1rem;
 }
+
+.bi-trash {
+  margin-right: 0.5rem;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-size: 1.5em;
+  font-weight: 550;
+  margin-bottom: 1rem;
+}
+.info span{
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
