@@ -35,10 +35,19 @@
   color: var(--grey-color);
 }
 
-.video__action .bi:hover {
+.icon-active{
   color: var(--black-color);
 }
 
+/*
+.video__action .bi:active{
+color: var(--black-color);
+}
+
+.video__action .bi:hover{
+color: var(--black-color);
+}
+*/
 .video__header {
   border-bottom: 1px solid var(--border-color);
 }

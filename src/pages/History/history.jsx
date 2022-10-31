@@ -19,7 +19,7 @@ const History = () => {
      {historyData.length ? (
       <>
       <div className="info">
-        <p>Watch History</p>
+        <p>Watched Video History</p>
         <span
           onClick={() => {
             deleteAllHistoryData(token, userDataDispatch);

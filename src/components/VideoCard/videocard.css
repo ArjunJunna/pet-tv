@@ -97,6 +97,7 @@
   align-items: flex-end;
   font-size: 1.6rem;
   cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 .avatar-small {
