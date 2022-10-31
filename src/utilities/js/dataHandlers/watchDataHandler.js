@@ -20,7 +20,8 @@ const getWatchLaterData = async (token, userDataDispatch) => {
 const addToWatchLaterData = async (
   video,
   token,
-  userDataDispatch
+  userDataDispatch,
+  setIsInWatchLater
 ) => {
   try {
     const response = await axios.post(
@@ -33,6 +34,7 @@ const addToWatchLaterData = async (
         type: 'WATCHLATER_DATA',
         payload: response?.data?.watchlater,
       });
+      setIsInWatchLater(false);
       toast.success('You have added video to watch later!!!');
     }
   } catch (error) {
