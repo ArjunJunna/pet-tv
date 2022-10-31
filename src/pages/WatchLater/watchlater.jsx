@@ -13,7 +13,7 @@ const WatchLater = () => {
       {watchlaterData.length ? (
         <>
           <div className="info">
-            <p>Watch History</p>
+            <p>Watch Later Video History</p>
           </div>
 
           <div className="main__container-content">

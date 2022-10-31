@@ -12,7 +12,7 @@ const Likes=()=>{
       {likedData.length ? (
         <>
           <div className="info">
-            <p>Watch History</p>
+            <p>Liked Video History</p>
           </div>
 
           <div className="main__container-content">
