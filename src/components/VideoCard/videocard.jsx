@@ -6,7 +6,7 @@ import { useAuth } from '../../context/authContext';
 import {addToWatchLaterData,deleteFromWatchLaterData} from '../../utilities/js/dataHandlers/watchDataHandler'
 import {useUserData} from '../../context/userDataContext'
 
-const VideoCard = ({ video, cardDirection }) => {
+const VideoCard = ({ video}) => {
   const navigate = useNavigate();
 
   const{_id,title,youtubeId,thumbnailUrl,videoLength,channelImg,channelName,views,releaseDate}=video;
