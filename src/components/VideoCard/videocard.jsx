@@ -1,40 +1,40 @@
 import './videocard.css';
 import { getTrimmedViewCount } from '../../utilities/js/getTrimmedViewCount';
 import { useNavigate,Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useAuth } from '../../context/authContext';
+import {addToWatchLaterData,deleteFromWatchLaterData} from '../../utilities/js/dataHandlers/watchDataHandler'
+import {useUserData} from '../../context/userDataContext'
 
 const VideoCard = ({ video, cardDirection }) => {
   const navigate = useNavigate();
 
-  const {
-    auth: { isAuthorized },
-  } = useAuth();
+  const{_id,title,youtubeId,thumbnailUrl,videoLength,channelImg,channelName,views,releaseDate}=video;
+
+  const {auth: { token,isAuthorized }} = useAuth();
+  const {userData: { watchlaterData },userDataDispatch } = useUserData();
   const [showActionCard, setShowActionCard] = useState(false);
-  console.log(video.youtubeId)
+  const [isInWatchLater, setIsInWatchLater] = useState(false);
+
+  useEffect(() => {
+    watchlaterData.find(video => video._id === _id) && setIsInWatchLater(true);
+  }, [watchlaterData, _id]);
+
   return (
     <div className="card__container vertical">
-      <div onClick={() => navigate(`/videoplayer/${video.youtubeId}`)}>
+      <div onClick={() => navigate(`/videoplayer/${youtubeId}`)}>
         <div className="card-header">
-          <img
-            src={video.thumbnailUrl}
-            alt="productimage"
-            className="card-image"
-          />
-          <span className="card-badge">{video.videoLength}</span>
+          <img src={thumbnailUrl} alt="productimage" className="card-image" />
+          <span className="card-badge">{videoLength}</span>
         </div>
       </div>
       <div className="card-content">
-        <img
-          src={video.channelImg}
-          alt="person"
-          className="avatar-small circle"
-        />
+        <img src={channelImg} alt="person" className="avatar-small circle" />
         <div className="card-details">
-          <h2 className="detail-heading">{video.title}</h2>
-          <p className="detail-subheading">{video.channelName}</p>
+          <h2 className="detail-heading">{title}</h2>
+          <p className="detail-subheading">{channelName}</p>
           <p className="detail-subheading">
-            {getTrimmedViewCount(video.views)} views · {video.releaseDate}
+            {getTrimmedViewCount(views)} views · {releaseDate}
           </p>
         </div>
         <div className="card-footer">
@@ -49,7 +49,24 @@ const VideoCard = ({ video, cardDirection }) => {
             ></i>
             {showActionCard && (
               <div className={`${showActionCard} action--card`}>
-                <div className="action--option">
+                <div
+                  className="action--option"
+                  onClick={() => {
+                    isInWatchLater
+                      ? deleteFromWatchLaterData(
+                          video,
+                          token,
+                          userDataDispatch,
+                          setIsInWatchLater
+                        )
+                      : addToWatchLaterData(
+                          video,
+                          token,
+                          userDataDispatch,
+                          setIsInWatchLater
+                        );
+                  }}
+                >
                   <i className="bi bi-clock-fill"></i>
                   Watch Later
                 </div>

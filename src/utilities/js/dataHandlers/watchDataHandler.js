@@ -42,7 +42,12 @@ const addToWatchLaterData = async (
   }
 };
 
-const deleteFromWatchLaterData = async (video, token, userDataDispatch) => {
+const deleteFromWatchLaterData = async (
+  video,
+  token,
+  userDataDispatch,
+  setIsInWatchLater
+) => {
   try {
     const response = await axios.delete(`/api/user/watchlater/${video._id}`, {
       headers: { authorization: token },
@@ -52,10 +57,11 @@ const deleteFromWatchLaterData = async (video, token, userDataDispatch) => {
         type: 'WATCHLATER_DATA',
         payload: response?.data?.watchlater,
       });
+      setIsInWatchLater(false);
       toast.success('You have removed video from watch later list...');
     }
   } catch (error) {
-    console.log('error')
+    console.log(error);
   }
 };
 
