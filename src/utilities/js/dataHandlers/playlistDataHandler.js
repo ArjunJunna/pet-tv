@@ -78,14 +78,11 @@ const addVideoToPlaylistData = async (
       { headers: { authorization: token } }
     );
     if (response.status === 201) {
-      userDataDispatch({
-        type: 'PLAYLIST_DATA',
-        payload: response?.data?.playlists,
-      });
-      toast.success(`Video is added to ${playlist.name}...`);
+      userDataDispatch({ type: 'PLAYLIST_DATA', payload: response?.data });
+      toast.success(`${video.title} added to ${playlist.playlistTitle}`);
     }
   } catch (error) {
-    toast.error('Oops!!!Something went wrong...');
+    console.log(error);
   }
 };
 
