@@ -6,10 +6,11 @@ import { useUserData } from '../../context/userDataContext';
 import { deleteFromHistoryData } from '../../utilities/js/dataHandlers/historyDataHandler';
 import { deleteFromWatchLaterData } from '../../utilities/js/dataHandlers/watchDataHandler';
 import { deleteFromLikedData } from '../../utilities/js/dataHandlers/likeDataHandler';
+import {deleteVideoFromPlaylistData} from '../../utilities/js/dataHandlers/playlistDataHandler'
 import './videocard.css';
 import '../../utilities/css/util.css'
 
-const DynamicVideoCard = ({video}) => {
+const DynamicVideoCard = ({ video,playlist = null }) => {
   const {
     auth: { token },
   } = useAuth();
@@ -66,6 +67,19 @@ const DynamicVideoCard = ({video}) => {
                   deleteFromLikedData(video, token, userDataDispatch);
                   console.log('delete clicked!!!');
                 }}
+              ></i>
+            )}
+            {playlist && (
+              <i
+                className="bi bi-trash dots"
+                onClick={() =>
+                  deleteVideoFromPlaylistData(
+                    playlist,
+                    video,
+                    token,
+                    userDataDispatch
+                  )
+                }
               ></i>
             )}
           </div>
