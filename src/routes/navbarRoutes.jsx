@@ -28,7 +28,6 @@ function NavBarRoutes(){
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/playlist/:playlistId" element={<SinglePlaylist />} />
       </Route>
-      <Route path="/mockman" element={<MockAPI />} />
     </Routes>
   );
 }

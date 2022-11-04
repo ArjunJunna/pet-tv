@@ -40,9 +40,6 @@ const Sidebar = () => {
             History
           </Link>
         </li>
-        <li className={location.pathname === '/mockman' ? `active--tab` : ''}>
-          <Link to="/mockman">MockAPI</Link>
-        </li>
       </ul>
     </aside>
   );
