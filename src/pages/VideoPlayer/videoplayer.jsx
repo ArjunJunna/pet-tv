@@ -5,6 +5,7 @@ import { useDataContext } from '../../context/dataContext';
 import { useUserData } from '../../context/userDataContext';
 import { useAuth } from '../../context/authContext';
 import { addToHistoryData } from '../../utilities/js/dataHandlers/historyDataHandler';
+import PlaylistModal from '../../components/PlaylistModal/playlist-modal'
 import {
   addToLikedData,
   deleteFromLikedData,
@@ -26,6 +27,7 @@ const VideoPlayer = () => {
   const {auth: { token, isAuthorized }} = useAuth();
   const videoRef = useRef();
   const { youtubeId } = useParams();
+   const [viewModal, setViewModal] = useState(false);
 
   const video = videoData.find(video => video.youtubeId === youtubeId);
 
@@ -69,11 +71,7 @@ const VideoPlayer = () => {
                 <button
                   onClick={() => {
                     isLiked
-                      ? deleteFromLikedData(
-                          video,
-                          token,
-                          userDataDispatch
-                        )
+                      ? deleteFromLikedData(video, token, userDataDispatch)
                       : addToLikedData(
                           video,
                           token,
@@ -106,7 +104,7 @@ const VideoPlayer = () => {
                     <i className="bi bi-clock-fill"></i>
                   )}
                 </button>
-                <button>
+                <button onClick={() => setViewModal(prev => !prev)}>
                   <i className="bi bi-folder-fill"></i>
                 </button>
               </div>
@@ -120,6 +118,11 @@ const VideoPlayer = () => {
             <div className="video__body-disc">{description}</div>
           </div>
         </div>
+        <PlaylistModal
+          setViewModal={setViewModal}
+          viewModal={viewModal}
+          video={video}
+        />
       </div>
     </>
   );
