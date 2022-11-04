@@ -150,8 +150,39 @@
   font-weight: 550;
   margin-bottom: 1rem;
 }
-.info span{
+.info span {
   cursor: pointer;
   margin-right: 1rem;
 }
 
+.playlist__count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  font-size: 4rem;
+  background-color: rgba(0, 0, 0, 0.493);
+  color: var(--primary-color);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container .fall-header {
+  height: 18rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight:600;
+  background-color: hwb(0deg 4% 85% / 13%);
+  color: #978181;
+}
+
+.m-left{
+  margin-left: 0.5rem;
+}

@@ -100,9 +100,9 @@ const deleteVideoFromPlaylistData = async (
     if (response.status === 200) {
       userDataDispatch({
         type: 'PLAYLIST_DATA',
-        payload: response?.data?.history,
+        payload: response?.data
       });
-      toast.success('Video is removed from playlist...');
+      toast.success(`${video.title} removed from ${playlist.playlistTitle}...`);
     }
   } catch (error) {
     toast.error('Oops!!!Something went wrong...');

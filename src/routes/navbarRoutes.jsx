@@ -11,6 +11,7 @@ import SignupPage from '../pages/Authentication/signuppage';
 import MockAPI from '../components/Mockman/mock-man';
 import AuthorizedRoutes from '../routes/authorizedRoutes';
 import Explore from '../pages/Explore/explore'
+import SinglePlaylist from '../pages/SinglePlaylist/singleplaylist';
 
 function NavBarRoutes(){
   return (
@@ -25,6 +26,7 @@ function NavBarRoutes(){
         <Route path="/likes" element={<Likes />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/playlist/:playlistId" element={<SinglePlaylist />} />
       </Route>
       <Route path="/mockman" element={<MockAPI />} />
     </Routes>
