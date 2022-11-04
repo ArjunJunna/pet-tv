@@ -8,7 +8,6 @@ import VideoPlayer from '../pages/VideoPlayer/videoplayer';
 import WatchLater from '../pages/WatchLater/watchlater';
 import LoginPage from '../pages/Authentication/loginpage';
 import SignupPage from '../pages/Authentication/signuppage';
-import MockAPI from '../components/Mockman/mock-man';
 import AuthorizedRoutes from '../routes/authorizedRoutes';
 import Explore from '../pages/Explore/explore'
 import SinglePlaylist from '../pages/SinglePlaylist/singleplaylist';
