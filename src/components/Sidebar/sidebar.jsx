@@ -8,36 +8,38 @@ const Sidebar = () => {
    const location = useLocation();
 
   return (
-    <aside>
+    <aside className="sidebar">
       <ul className="list">
         <li className={location.pathname === '/explore' ? `active--tab` : ''}>
           <Link to="/explore">
             <i className="bi bi-compass-fill"></i>
-            Explore
+            <span>Explore</span>
           </Link>
         </li>
         <li className={location.pathname === '/playlist' ? `active--tab` : ''}>
           <Link to="/playlist">
             <i className="bi bi-folder-fill"></i>
-            Playlists
+            <span>Playlists </span>
           </Link>
         </li>
         <li className={location.pathname === '/likes' ? `active--tab` : ''}>
           <Link to="/likes">
             <i className="bi bi-hand-thumbs-up-fill"></i>
-            Liked Videos
+            <span>Liked Videos</span>
           </Link>
         </li>
-        <li className={location.pathname === '/watchlater' ? `active--tab` : ''}>
+        <li
+          className={location.pathname === '/watchlater' ? `active--tab` : ''}
+        >
           <Link to="/watchlater">
             <i className="bi bi-clock-fill"></i>
-            Watch later
+            <span>Watch later</span>
           </Link>
         </li>
         <li className={location.pathname === '/history' ? `active--tab` : ''}>
           <Link to="/history">
             <i className="bi bi-clock-history"></i>
-            History
+            <span>History</span>
           </Link>
         </li>
       </ul>
