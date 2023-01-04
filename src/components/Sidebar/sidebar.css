@@ -1,0 +1,17 @@
+.sidebar{
+   display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: max-content;
+  gap: 2rem;
+  padding: 2rem 0;
+  position: fixed;
+  bottom: 0;
+  top: 8vh;
+}
+@media screen and (max-width: 600px) {
+  .sidebar span{
+    display: none;
+  }
+  
+}

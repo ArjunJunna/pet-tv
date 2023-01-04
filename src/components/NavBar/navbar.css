@@ -11,6 +11,10 @@
   background: none;
   list-style: none;
   border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white-color);
 }
 
 .left-nav {
