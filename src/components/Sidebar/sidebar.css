@@ -1,5 +1,5 @@
-.sidebar{
-   display: flex;
+.sidebar {
+  display: flex;
   height: 100%;
   flex-direction: column;
   width: max-content;
@@ -10,8 +10,10 @@
   top: 8vh;
 }
 @media screen and (max-width: 600px) {
-  .sidebar span{
+  .sidebar span {
     display: none;
   }
-  
+  .sidebar .list li {
+    padding: 1rem 0.5rem;
+  }
 }
